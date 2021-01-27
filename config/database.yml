@@ -12,7 +12,7 @@ default: &default
 development:
   <<: *default
   database: placesharing_db
-  host: 172.17.0.4 # change it to your docker container IP, eitherwise, use localhost if you using conventional postgresql server db
+  host: localhost # change it to your docker container IP, eitherwise, use localhost if you using conventional postgresql server db
   username: postgres
   password: postgres
 
