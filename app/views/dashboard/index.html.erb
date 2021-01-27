@@ -1,3 +1,15 @@
-<h1>Dashboard#index</h1>
-<p class="h2">Find me in app/views/dashboard/index.html.erb</p>
-<button class="btn btn-lg btn-primary">Test bootstrap</button>
+
+<%= render('layouts/navbar') %>
+<div class="container-fluid">
+  <div class="col-md-12 p-3">
+    <div class="row">
+      <h1>Welcome, <%= current_user.display_name %> </h1>
+    </div>
+    <div class="row mt-3">
+      <div id="locationData" data-locations="<%= @locations.to_json %>"></div>
+      <div id="sharedLocationData" data-locations="<%= @shared_locations.to_json %>"></div>
+      <div id="dashboardMap" class="showMap ml-0"></div>
+      <%= javascript_pack_tag "showDashboardMap" %>
+    </div>
+  </div>
+</div>
