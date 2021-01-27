@@ -1,0 +1,13 @@
+<%= render('layouts/navbar') %>
+<div class="container-fluid">
+  <div class="col-md-12 p-3">
+    <div class="row">
+      <h1>This is <%= @user.display_name %> public locations</h1>
+    </div>
+    <div class="row">
+      <div id="currentUserLocation" data-locations="<%= @current_user_location.to_json %>"></div>
+      <div id="currentUserPlaces" class="showMap ml-0"></div>
+      <%= javascript_pack_tag "showLocationProfile" %>
+    </div>
+  </div>
+</div>

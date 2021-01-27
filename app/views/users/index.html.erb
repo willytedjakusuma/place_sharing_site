@@ -1,0 +1,21 @@
+<%= render('layouts/navbar') %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Display Name</th>
+      <th>Email</th>
+      <th>Public Locations</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.display_name %></td>
+        <td><%= user.email %></td>
+        <td><%= link_to "Show", user_profile_path(username: user.username) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
