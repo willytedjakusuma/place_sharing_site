@@ -10,6 +10,8 @@ Requirement
   1. Postgres Database ( Docker / Local Server )
   2. Ruby 2.7.2
   3. Gem Bundler 2.1.4
+  4. NPM 6.14.10
+  5. Node 14.15.4
 ```
 
 ---
