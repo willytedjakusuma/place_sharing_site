@@ -28,3 +28,7 @@ test:
 
 production:
   <<: *default
+  database: placesharing_db
+  host: localhost # change it to your docker container IP, eitherwise, use localhost if you using conventional postgresql server db
+  username: postgres
+  password: postgres
