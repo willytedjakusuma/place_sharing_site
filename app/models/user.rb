@@ -4,5 +4,5 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validates :display_name, presence: true
-  validates :username, presence: true
+  validates :username, presence: true, :format => { :with => /[^.]*/ }
 end
